@@ -68,15 +68,15 @@ while game_running_flag:
 
     pygame.draw.rect(game_display, game_characteristics["grass"]["color"], pygame.Rect(0, game_characteristics["grass"]["position"]["y"], monitor_display[0],monitor_display[1] - game_characteristics["grass"]["position"]["y"]))
 
-game_tank_sprite_player = game_tank_sprite
+    game_tank_sprite_player = game_tank_sprite
 
-game_display.blit(game_tank_sprite_player, (game_characteristics["player"]["position"]["x"] - game_tank_sprite_player.get_height()))
+    game_display.blit(game_tank_sprite_player, (game_characteristics["player"]["position"]["x"] - game_tank_sprite_player.get_height()))
 
-game_tank_sprite_cpu = pygame.transform.flip(game_tank_sprite, True, False)
+    game_tank_sprite_cpu = pygame.transform.flip(game_tank_sprite, True, False)
 
-game_display.blit(game_tank_sprite_cpu, (game_characteristics["cpu"]["position"]["x"], (game_characteristics["player"]["position"]["x"] - game_tank_sprite_cpu.get_height())))
+    game_display.blit(game_tank_sprite_cpu, (game_characteristics["cpu"]["position"]["x"], (game_characteristics["player"]["position"]["x"] - game_tank_sprite_cpu.get_height())))
 
     #Render game frame by frame. 
-pygame.display.update()
+    pygame.display.update()
 
-system_clock.tick(30)
+    system_clock.tick(30)
