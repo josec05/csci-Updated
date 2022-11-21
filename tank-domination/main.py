@@ -61,7 +61,8 @@ while game_running_flag:
     elif key_pressed[pygame.K_RIGHT]:
         position_delta = 1
 
-    game_characteristics["player"]["position"]["x"] += position_delta
+    if 0 <= game_characteristics["player"]["position"]["x"] + position_delta and game_characteristics["player"]['position']["x"] + position_delta + game_tank_sprite.get_width() <= game_characteristics["cpu"]["position"]["x"]:
+        game_characteristics["player"]["position"]["x"] += position_delta
     
     #Game Graphics
     game_display.fill(game_characteristics["sky"]["color"])
